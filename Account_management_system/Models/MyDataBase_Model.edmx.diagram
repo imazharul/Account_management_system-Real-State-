@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4a9d4658dd3547b6a180591619f36014" Name="Diagram1">
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_admin" Width="1.625" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_customer" Width="1.75" PointX="5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_Expense" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_expense_category" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_extra_account" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_income_category" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_land_account" Width="1.5" PointX="6" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_notification" Width="1.5" PointX="5.25" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_notification_receiver" Width="1.5" PointX="7.5" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_parmision" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_role" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_salary_expense" Width="1.5" PointX="1.125" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_user" Width="1.75" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_admin_tbl_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_land_account_tbl_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_expense_tbl_expense_category" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_expense_tbl_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_extra_account_tbl_income_category" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_extra_account_tbl_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_income_category_tbl_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_notification_tbl_income_category" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_land_account_tbl_user" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_notification_receiver_tbl_notification" ManuallyRouted="false" />
+        <AssociationConnector Association="AMS_dbModel.FK_tbl_salary_expense_tbl_user1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AMS_dbModel.tbl_login_registration" Width="1.5" PointX="0.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

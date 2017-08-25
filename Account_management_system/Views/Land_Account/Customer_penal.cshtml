@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Account_management_system.Models.tbl_land_account>
+
+@{
+    ViewBag.Title = "Customer_penal";
+}
+
+<h2>Payment history Interface</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "")
+</p>*@
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.payment_process)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pay_order_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payment_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        
+        @*<th>
+            @Html.DisplayNameFor(model => model.tbl_customer.applicant_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_user.user_name)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.payment_process)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pay_order_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payment_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.payment_discription)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.tbl_customer.applicant_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_user.user_name)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.l_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.l_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.l_id })
+        </td>
+    </tr>
+}
+
+</table>

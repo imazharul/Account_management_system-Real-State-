@@ -1,0 +1,53 @@
+﻿@model Account_management_system.Models.AMS_dbEntities
+@if (Request.IsAuthenticated)
+{
+    //using (Html.BeginForm( "Login", FormMethod.Post}))
+    using (Html.BeginForm("_LoginPartial"))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @*@Html.ActionLink( )*@
+        </li>
+        @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <@*li>@Html.ActionLink("Registration", "Registration", "User")</li>*@
+            <div class="navbar-header">
+                <li class="navbar-collapse collapse">
+                    <a class="navbar-collapse collapse" data-toggle="dropdown">Registration<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <a class="navbar-collapse collapse" data-toggle="dropdown">Registration<span class="caret"></span></a>
+
+                        <li>@Html.ActionLink("Registration", "Registration", "User")</li>
+
+                    </ul>
+                </li>
+
+            </div>
+        
+        
+    @*<li>@Html.ActionLink("Log in", "Login", "Login")</li>*@
+        <div class="navbar-header">
+            <li class="navbar-collapse collapse">
+                <a class="navbar-collapse collapse" data-toggle="dropdown">Login<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <a class="navbar-collapse collapse" data-toggle="dropdown">Login<span class="caret"></span></a>
+                    
+                    <li>@Html.ActionLink("Log in", "Login", "User")</li>
+                    <li>@Html.ActionLink("Admin", "Login", "User")</li>
+                    @*<li>@Html.ActionLink("User", "Login", "User")</li>*@
+                    <li>@Html.ActionLink("Customer", "Login", "User")</li>
+                    <li>@Html.ActionLink("Employee", "Login", "User")</li>
+                       
+            </ul>
+        </li>
+
+    </div>
+    </ul>
+}

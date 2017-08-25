@@ -1,0 +1,50 @@
+﻿@model Account_management_system.Models.tbl_notification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_notification</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.notification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_income_category.category_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_income_category.category_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.notification_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

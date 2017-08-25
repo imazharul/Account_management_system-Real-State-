@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Account_management_system.Models.tbl_user>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All User Information</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.user_name)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.mobile_numbar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.present_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.parmanent_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.father_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mother_name)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.user_type)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.joining_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.user_name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.mobile_numbar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.present_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.parmanent_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.father_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mother_name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.user_type)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.joining_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.user_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.user_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.user_id })
+        </td>
+    </tr>
+}
+
+</table>

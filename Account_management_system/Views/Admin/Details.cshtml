@@ -1,0 +1,90 @@
+﻿@model Account_management_system.Models.tbl_admin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_admin</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.employeeid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeeid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_access)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_access)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_user.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_user.user_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.admin_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
